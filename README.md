@@ -6,6 +6,10 @@
   <li>Display hymnal songs</li>
 </ul>
 
+# Logic plan
+
+
+
 # Compatibility
 <ul>
   <li>Windows</li>

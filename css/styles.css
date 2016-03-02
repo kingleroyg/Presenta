@@ -65,3 +65,10 @@ a, a:visited, a:hover{
 	color: #A2A9BD;
 	margin-right: 10px;
 }
+
+.previewContainer_view .liveContainer_view{
+
+	width: 300px;
+	background-color: blue;
+
+}

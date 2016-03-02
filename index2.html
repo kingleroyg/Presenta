@@ -14,8 +14,8 @@
 <body>
 
 <div class="flipster">
-<h1>Hi, I'm index2.html aka win2</h1>
-<p>Message from first display</p>
+<h1>Song</h1>
+<p class="currentSong">Message from first display</p>
 <p class="messageRecieved"></p>
 
  
@@ -26,9 +26,14 @@
 <script>window.$ = window.jQuery = require('./js/jquery.min.js');</script>
 <script src="./js/jquery.flipster.min.js"></script>
 <script src="./js/script.js"></script>
+
  <script type="text/javascript">
  	 const ipcRenderer = require('electron').ipcRenderer;
- 	ipcRenderer.on('info' , function(event , data){ console.log(data.msg) });
+ 	
+ 	 ipcRenderer.on('info' , function(event , data){ 
+ 	 	console.log(data.msg) 
+ 	 	$('.currentSong').html(data.msg);
+ 	 });
  </script>
 
 

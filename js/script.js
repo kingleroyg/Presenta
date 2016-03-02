@@ -2,6 +2,36 @@
 
 
 $(function(){
+
+$(document).ready(function(){
+
+
+$('.display_item').on('change', function() {
+   // or $(this).val()
+  $('.previewContainer_view').html(this.value);
+});
+
+$('.updateview').on('click',  function(e){
+
+    $('.liveContainer_view').html($('.previewContainer_view').html());
+
+                //Updating Second view
+                e.preventDefault();
+                const ipcRenderer = require('electron').ipcRenderer;
+                console.log("Sending message");
+                
+                 
+                //ipcRenderer.on('asynchronous-reply', function(event, arg) {
+                //    console.log(arg); // prints "pong"
+                //});
+
+                ipcRenderer.send('asynchronous-message', $('.liveContainer_view').html());
+    });
+
+
+});
+
+
 const ipcMain = require('electron').ipcMain;
     // Display some statistics about this computer, using node's os module.
 

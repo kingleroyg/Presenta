@@ -27,7 +27,7 @@ app.on('window-all-closed', function() {
 // initialization and is ready to create browser windows.
 app.on('ready', function() {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 1000, height: 625});
+  mainWindow = new BrowserWindow({width: 1300, height: 725});
 
   // and load the index.html of the app.
   mainWindow.loadURL('file://' + __dirname + '/index1.html');
@@ -63,15 +63,15 @@ app.on('ready', function() {
     previewWindow = null;
   }); 
 
-
+ 
 
    //Recieving message to window
     const ipcMain = require('electron').ipcMain;
 
 
       ipcMain.on('asynchronous-message', function(event, arg) {
-
-        previewWindow.webContents.send('info' , {msg:'hello from main process'});
+        
+        previewWindow.webContents.send('info' , {msg:arg});
         console.log(arg);  // prints "ping"
         event.sender.send('asynchronous-reply', 'pong');
       });

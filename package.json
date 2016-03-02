@@ -1,7 +1,7 @@
 {
-  "name": "electron-app",
+  "name": "Presenta-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Presentation application",
   "main": "main.js",
   "dependencies": {
     "pretty-bytes": "^2.0.1"
@@ -12,6 +12,6 @@
   "scripts": {
     "start": "electron main.js"
   },
-  "author": "",
+  "author": "leroy gumede",
   "license": "ISC"
 }

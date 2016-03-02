@@ -1,0 +1,17 @@
+.previewContainer_view {
+	color:white;
+	width: 300px;
+	height: 200px;
+	background-color: grey;
+	padding: 30px;
+
+}
+
+.liveContainer_view{
+	color: black;
+	width: 300px;
+	height: 200px;
+	background-color: white;
+	padding: 30px;
+
+}

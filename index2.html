@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Tutorialzine Electron Experiment</title>
+
+    <link rel="stylesheet" href="./css/jquery.flipster.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+<body>
+
+<div class="flipster">
+<h1>Hi, I'm index2.html aka win2</h1>
+<p>Message from first display</p>
+<p class="messageRecieved"></p>
+
+ 
+</div>
+
+<p class="stats"></p>
+
+<script>window.$ = window.jQuery = require('./js/jquery.min.js');</script>
+<script src="./js/jquery.flipster.min.js"></script>
+<script src="./js/script.js"></script>
+ <script type="text/javascript">
+ 	 const ipcRenderer = require('electron').ipcRenderer;
+ 	ipcRenderer.on('info' , function(event , data){ console.log(data.msg) });
+ </script>
+
+
+</body>
+</html>

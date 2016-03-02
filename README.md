@@ -8,7 +8,8 @@
 
 # Logic plan
 
-
+<p>What is currently happening</p>
+![Alt text](Presenta logic plan.png?raw=true "What is currently happening")
 
 # Compatibility
 <ul>

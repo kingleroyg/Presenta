@@ -6,20 +6,15 @@
 
     <title>Tutorialzine Electron Experiment</title><!--
     https://github.com/FezVrasta/bootstrap-material-design
-
+    http://fezvrasta.github.io/bootstrap-material-design/bootstrap-elements.html
 
     <link rel="stylesheet" href="./css/jquery.flipster.min.css"><link rel="stylesheet" href="./css/styles.css">
 -->
     <!-- Material Design fonts -->
     <!-- Bootstrap -->
-    <link href="bower_components/bootstrap/dist\css/bootstrap.min.css" rel=
-    "stylesheet" type="text/css"><!-- Bootstrap Material Design -->
-    <link href=
-    "bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.css"
-    rel="stylesheet" type="text/css">
-    <link href=
-    "bower_components/bootstrap-material-design/dist/css/ripples.min.css" rel=
-    "stylesheet" type="text/css">
+    <link href="bower_components/bootstrap/dist\css/bootstrap.min.css" rel="stylesheet" type="text/css"><!-- Bootstrap Material Design -->
+    <link href="bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.css" rel="stylesheet" type="text/css">
+    <link href= "bower_components/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet" type="text/css">
     <link href="./css/custom.css" rel="stylesheet">
 </head>
 
@@ -27,63 +22,167 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <p>Select Text</p>
-                <select class="display_item">
-                    <option value="song1">
-                        Song Number 1
-                    </option>
 
-                    <option value="song2">
-                        Song Number 2
-                    </option>
 
-                    <option value="song3">
-                        Song Number 3
-                    </option>
+<div class="panel panel-primary">
+  <div class="panel-heading">Import list</div>
+  <div class="panel-body">
+    <p>Upload file</p>
+  
+        <div class="form-group is-empty is-fileinput">
+                <label for="inputFile" class="col-md-2 control-label">File</label>
 
-                    <option value="song4">
-                        Song Number 4
-                    </option>
-                </select>
+                <div class="col-md-10">
+                  <input readonly="" class="form-control" placeholder="Browse..." type="text">
+                  <input id="inputFile" class='file-upload-button' multiple="" type="file">
+                </div>
+              <span class="material-input"></span>
+          </div>
+
+
+
+   <p class="uploadResult"></p>
+  </div>
+</div>
+
+
+
+
+
+
+
+            <div class="form-group">
+                            <label for="select111" class="col-md-2 control-label">Select</label>
+
+                            <div class="col-md-10">
+                              <select id="select111" class="form-control display_item"> 
+                              </select>
+                            </div>
+                          <span class="material-input">
+             </span>
+            </div>
+
+<br />
+<br />
+<br />
+<br />
+              
+<div class="panel panel-default">
+  <div class="panel-heading">Song Controller</div>
+  <div class="panel-body">
+    <p>By defualt song will always play chorus after verse</p>
+
+    <a href="javascript:void(0)" class="btn btn-raised btn-info">back</a>
+    <a href="javascript:void(0)" class="btn btn-raised btn-info">forword</a>
+    
+        <ul class="pagination pagination-sm">
+          <li class="disabled"><a href="javascript:void(0)">«</a></li>
+          <li class="active"><a href="javascript:void(0)">1</a></li>
+          <li><a href="javascript:void(0)">chorus</a></li>
+          <li><a href="javascript:void(0)">2</a></li>
+          <li><a href="javascript:void(0)">3</a></li>
+          <li><a href="javascript:void(0)">4</a></li>
+          <li><a href="javascript:void(0)">5</a></li>
+          <li><a href="javascript:void(0)">»</a></li>
+        </ul>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
             </div>
 
 
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-md-12">
-                        <p class="text-center">Preview</p>
+                       
 
 
-                        <div class="previewContainer_view">
-                        </div>
+ 
+               
+
+                    <div class="panel panel-primary">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">Preview window</h3>
+                          </div>
+                      <div class="panel-body">
+                               <div class="previewContainer_view">
+                                    <div id="previewContent">
+                                    </div>
+                                </div>
+                      </div>
+                    </div>
+
+ 
+
+
                     </div>
                 </div>
 
 
                 <div class="row">
                     <div class="col-md-12">
-                        <button class="btn btn-info updateview" type=
-                        "submit">Update live</button><br>
 
 
-                        <p class="text-center">LIVE</p>
+                       <!-- <button class="btn btn-info updateview" type="submit">Update live</button><br> -->
+                        <a href="#" class="btn btn-raised btn-succes updateviews" type="submit">Update live<div class="ripple-container"></div></a>
+
+                    <div class="panel panel-success">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">Live window</h3>
+                          </div>
+                      <div class="panel-body">
+                            <div class="liveContainer_view">
+                                    <div id="previewContent_live">
+                                    </div>
+                            </div>
+                      </div>
+                      <div class="panel-footer">
+                            <div class="btn-group">
+                            <a href="javascript:void(0)" class="btn btn-primary btn-raised">Functions<div class="ripple-container"></div></a>
+                            <a aria-expanded="false" href="bootstrap-elements.html" data-target="#" class="btn btn-primary btn-raised dropdown-toggle" data-toggle="dropdown"><span class="caret"></span><div class="ripple-container"></div></a>
+                            <ul class="dropdown-menu">
+                            <li><a href="#">Open Live Window</a></li>
+                            <li><a href="#">black screen</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Preview</a></li>
+                            </ul>
+                            </div>
+
+                      </div>
+                    </div>
 
 
-                        <div class="liveContainer_view">
-                        </div>
+
+
+
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-    window.$ = window.jQuery = require('./js/jquery.min.js');
-    </script> 
-    <script src="./js/jquery.flipster.min.js">
-    </script> 
-    <script src="./js/script.js">
-    </script> 
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js">
+    <script>  window.$ = window.jQuery = require('./js/jquery.min.js');  </script> 
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"> </script>
+
+     <script src="bower_components/bootstrap-material-design/dist/js/material.min.js"> </script>
+     <script src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"> </script>
+ 
+    <script type="text/javascript">
+        $.material.init();
     </script>
+
+    <script src="./js/script.js"></script> 
+    
+    <script src="js/admin.js"></script> 
+
 </body>
 </html>

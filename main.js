@@ -23,8 +23,10 @@ app.on('window-all-closed', function() {
 app.on('ready', function() {
     // Create the browser window.
     mainWindow = new BrowserWindow({
-        width: 1300,
-        height: 725
+        width: 1800,
+        height: 725,
+         center:true,
+        title: "PresentA - Pre-Alpha"
     });
     // and load the index.html of the app.
     mainWindow.loadURL('file://' + __dirname + '/index1.html');
@@ -37,15 +39,41 @@ app.on('ready', function() {
         // when you should delete the corresponding element.
         mainWindow = null;
     });
-    //-------------------------------------Open second window
-    previewWindow = new BrowserWindow({
-        title: 'Presentation window',
-        "width": 400,
-        "height": 600
+
+
+
+
+
+    //Recieving message to window
+    const ipcMain = require('electron').ipcMain;
+    ipcMain.on('asynchronous-message', function(event, arg) {
+        if(previewWindow != null){
+            previewWindow.webContents.send('info', {
+                msg: arg
+            });
+            console.log(arg); // prints "ping"
+            event.sender.send('asynchronous-reply', 'pong'); 
+        }else{
+                previewWindow = new BrowserWindow({
+                title: 'Presentation window',
+                "width": 400,
+                "height": 600
+                });
+                previewWindow.loadURL('file://' + __dirname + '/index2.html');
+                previewWindow.show();
+        }
+
     });
-    previewWindow.loadURL('file://' + __dirname + '/index2.html');
-    previewWindow.show();
-    previewWindow.openDevTools();
+    //-------------------------------------Open second window
+ 
+        previewWindow = new BrowserWindow({
+            title: 'Presentation window',
+            "width": 400,
+            "height": 600
+        });
+        previewWindow.loadURL('file://' + __dirname + '/index2.html');
+        previewWindow.show();
+
     // Emitted when the window is closed.
     previewWindow.on('closed', function() {
         // Dereference the window object, usually you would store windows
@@ -53,13 +81,11 @@ app.on('ready', function() {
         // when you should delete the corresponding element.
         previewWindow = null;
     });
-    //Recieving message to window
-    const ipcMain = require('electron').ipcMain;
-    ipcMain.on('asynchronous-message', function(event, arg) {
-        previewWindow.webContents.send('info', {
-            msg: arg
-        });
-        console.log(arg); // prints "ping"
-        event.sender.send('asynchronous-reply', 'pong');
-    });
+
+
+ 
+   
+
+
+
 });

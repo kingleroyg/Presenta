@@ -3,27 +3,20 @@
   "name": "hymnalBeta",
   "version": 5,
   "other": "",
-  "data": [
-    {
-      "hymnal_id": "1",
-      "title": "Cantad alegres al Senor",
-      "preview": " Cantad alegres al Senor",
-      "content": "@Cantad alegres al S r, mortales todos por doquier; servidle siempre con fervor, obedecedle con placer. @
-      . 
-      @Con gratitud canción alzad  al Hacedor que el ser os dio;  al Dios excelso venerad,  que como Padre nos amó.@
-      @Su pueblo somos: salvará  a los que busquen al Señor;  ninguno de ellos dejará;  él los ampara con su amor@ "
-    },
-    {
-      "hymnal_id": "2",
-      "title": "A Mighty Fortress",
-      "preview": "A Mighty Fortress",
-      "content": "1. Cantad alegres al Se r, mortales todos por doquier; servidle siempre con fervor, obedecedle con placer. \n\n2. Con gratitud canción alzad  al Hacedor que el ser os dio;  al Dios excelso venerad,  que como Padre nos amó. \n\n3. Su pueblo somos: salvará  a los que busquen al Señor;  ninguno de ellos dejará;  él los ampara con su amor.  "
-    },
-    {
-      "hymnal_id": "3",
-      "title": "fsfsdfs s dssv sd",
-      "preview": "sfsdvsdv sdvsv",
-      "content": "1. Cantad alegres al Se r, mortales todos por doquier; servidle siempre con fervor, obedecedle con placer. \n\n2. Con gratitud canción alzad  al Hacedor que el ser os dio;  al Dios excelso venerad,  que como Padre nos amó. \n\n3. Su pueblo somos: salvará  a los que busquen al Señor;  ninguno de ellos dejará;  él los ampara con su amor.  "
-    }
-  ]
-}
+  "data": [{
+    "hymnal_id": "1",
+    "title": "Cantad alegres al Senor",
+    "preview": "Cantad alegres al Senor",
+    "content": "<verse>Cantad alegres al S r, mortales todos por doquier</verse><chorus>servidle siempre con fervor, obedecedle con placer.</chorus><verse>Con gratitud canción <b> alzad </b>  al Hacedor que el ser os dio</verse>  <verse>al Dios excelso venerad,  que como Padre nos amó.Su pueblo somos: salvará a los que</verse> <verse>busquen al Señor;ninguno de ellos dejará;él los ampara con su amor</verse>"
+  }, {
+    "hymnal_id": "2",
+    "title": "A Mighty Fortress",
+    "preview": "A Mighty Fortress",
+    "content": "<verse>1 - Verse Cantad alegres al S r, mortales todos por doquier</verse><chorus>2  - chorus servidle siempre con fervor, obedecedle con placer.</chorus><verse>3 - Verse Con gratitud canción <b> alzad </b>  al Hacedor que el ser os dio</verse>  <verse>4 - Verse al Dios excelso venerad,  que como Padre nos amó.Su pueblo somos: salvará a los que</verse> <verse>5 - Verse busquen al Señor;ninguno de ellos dejará;él los ampara con su amor</verse>"
+  }, {
+    "hymnal_id": "3",
+    "title": "fsfsdfs s dssv sd",
+    "preview": "sfsdvsdv sdvsv",
+    "content": "1. Cantad alegres al Se r, mortales todos por doquier; servidle siempre con fervor, obedecedle con placer. \n\n2. Con gratitud canción alzad  al Hacedor que el ser os dio;  al Dios excelso venerad,  que como Padre nos amó. \n\n3. Su pueblo somos: salvará  a los que busquen al Señor;  ninguno de ellos dejará;  él los ampara con su amor.  "
+  }]
+ }

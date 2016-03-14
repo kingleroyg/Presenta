@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -72,20 +72,20 @@
   <div class="panel-body">
     <p>By defualt song will always play chorus after verse</p>
 
+
     <a href="javascript:void(0)" class="btn btn-raised btn-info Back_liveController">back</a>
     <a href="javascript:void(0)" class="btn btn-raised btn-info Next_liveController">next</a>
-    
-        <ul class="pagination pagination-sm">
-          <li class="disabled"><a href="javascript:void(0)">«</a></li>
-          <li class="active"><a href="javascript:void(0)">1</a></li>
-          <li><a href="javascript:void(0)">chorus</a></li>
-          <li><a href="javascript:void(0)">2</a></li>
-          <li><a href="javascript:void(0)">3</a></li>
-          <li><a href="javascript:void(0)">4</a></li>
-          <li><a href="javascript:void(0)">5</a></li>
-          <li><a href="javascript:void(0)">»</a></li>
+ 
+      
+        <ul class="pagination pagination-sm paginationView">
+
         </ul>
-  </div>
+          
+
+     
+
+
+</div>
 </div>
 
 
@@ -112,6 +112,8 @@
                           </div>
                       <div class="panel-body">
                           <div hidden class="preview_data" item="" index="" section="" background=""></div>
+                          <div hidden class="preview_data" song="" item=""  section="" index="" ></div>
+                          
 
                                <div class="previewContainer_view">
                                     <div   id="previewContent">
@@ -130,9 +132,15 @@
                 <div class="row">
                     <div class="col-md-12">
 
-
-                       <!-- <button class="btn btn-info updateview" type="submit">Update live</button><br> -->
-                        <a href="#" class="btn btn-raised btn-succes updateviews" type="submit">Update live<div class="ripple-container"></div></a>
+                        <div>
+                            <!-- <button class="btn btn-info updateview" type="submit">Update live</button><br> -->
+                            <a href="#" class="btn btn-raised btn-succes updateviews" type="submit">Update live<div class="ripple-container"></div></a>
+                            <div class="togglebutton">
+                                <label>
+                                    <input type="checkbox" class="autoUpdateView"> Auto update live view
+                                </label>
+                            </div>
+                        </div>
 
                     <div class="panel panel-success">
                           <div class="panel-heading">
@@ -176,7 +184,7 @@
      <script src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"> </script>
  
     <script type="text/javascript">
-        $.material.init();
+        $.material.init(); 
     </script>
 
     <script src="./js/script.js"></script> 

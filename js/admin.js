@@ -249,8 +249,8 @@ $(document).ready(function() {
 			        $.each($data, function(index, value){
 			        	$('.display_item')
 					        .append($("<option></option>")
-					        .attr("value",value.content)
-					        .text(value.title));
+					        .attr("value",value.data)
+					        .text(value.hymn_num + " : " +value.title));
 
 			        });
 
